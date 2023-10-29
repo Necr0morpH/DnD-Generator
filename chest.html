@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/global-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/chest-generator.css">
+    <title>DnD Chest</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="header">
+
+            <div class="header__row">
+
+
+                <div class="row__logo">
+
+                    <a href=""><img src="IMG/D20.png" alt="" class="logo"></a>
+
+                </div>
+
+
+                <nav class="row__nav">
+
+                    <ul>
+
+                        <li><a href="main.html" class="text nav__item">player stat</a></li>
+                        <li><a href="main.html" class="text link--active nav__item">chest</a></li>
+                        <li><a href="room.html" class="text nav__item">room</a></li>
+                        <li><a href="" class="text nav__item">dicer</a></li>
+                        <li><a href="" class="text nav__item">for master</a></li>
+
+                    </ul>
+
+                </nav>
+
+
+                <div class="header__sing-block">
+
+                    <div class="sing-block__sing-in">
+                        <p class="text">sing in</p>
+                    </div>
+
+                    <div class="sing-block__sing-up">
+                        <p class="text">sing up</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="content">
+
+       
+        <div class="content__geterator">
+
+            <h1 class="text">chest generator</h1>
+
+            <button data-chest-00="">small</button>
+            <button data-chest-01="">standard</button>
+            <button data-chest-02="">big</button>
+                
+        </div>
+    
+        <div class="generator-seed-block">
+            <form action="" class="generator-seed-block__form">
+                <div class="generator-seed-block__button" id="seedButton"><p class="text">send seed</p></div>
+                <input type="number" class="generator-seed-block__input input text"id="seedInput">
+            </form>
+            <P class="text" id="warning"></P>
+        </div>
+            
+        <div class="generator__main">
+
+
+            <div class="flex">
+                <p class="text">chest№</p><span class="text" id="chestNumber"></span>
+            </div>
+
+            <div class="main-chest-block flex">
+
+                <div class="">
+
+                    <p class="title">currency</p>
+
+
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">copper: </p><span data-stats="" class="title-stat title-stat--num" id="copper"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">iron: </p><span data-stats="" class="title-stat title-stat--num" id="iron"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">gold: </p><span data-stats="" class="title-stat title-stat--num" id="gold"></span>
+        
+                    </div>
+
+                </div>
+
+
+                <div class="">
+
+                    <p class="title">currency</p>
+
+
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">potions: </p><span data-stats="" class="title-stat title-stat--num" id="potions"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">consumables: </p><span data-stats="" class="title-stat title-stat--num" id="consumables"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">materials: </p><span data-stats="" class="title-stat title-stat--num" id="materials"></span>
+        
+                    </div>
+
+                </div>
+                
+
+                <div class="">
+
+                    <p class="title">artifacts</p>
+
+
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">artifact_1: </p><span data-stats="" class="title-stat title-stat--num" id="artifact_1"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">artifact_2: </p><span data-stats="" class="title-stat title-stat--num" id="artifact_2"></span>
+        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">artifact_3: </p><span data-stats="" class="title-stat title-stat--num" id="artifact_3"></span>
+        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="JS/chest-generator.js"></script>
+
+
+</body>
+</html>

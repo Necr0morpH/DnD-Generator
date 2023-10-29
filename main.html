@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/global-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <title>DnD Geterator</title>
+</head>
+<body>
+    
+    <header>
+
+        <div class="header">
+
+            <div class="header__row">
+
+
+                <div class="row__logo">
+
+                    <a href=""><img src="IMG/D20.png" alt="" class="logo"></a>
+
+                </div>
+
+
+                <nav class="row__nav">
+
+                    <ul>
+
+                        <li><a href="main.html" class="text link--active nav__item">player stat</a></li>
+                        <li><a href="chest.html" class="text nav__item">chest</a></li>
+                        <li><a href="room.html" class="text nav__item">room</a></li>
+                        <li><a href="" class="text nav__item">dicer</a></li>
+                        <li><a href="" class="text nav__item">for master</a></li>
+
+                    </ul>
+
+                </nav>
+
+
+                <div class="header__sing-block">
+
+                    <div class="sing-block__sing-in">
+                        <p class="text">sing in</p>
+                    </div>
+
+                    <div class="sing-block__sing-up">
+                        <p class="text">sing up</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="content">
+
+        <div class="flex">
+            <div class="content__geterator">
+
+                <h1 class="text">player statistics generator</h1>
+                <div class="generator__class-list">
+                    <button data-person-btn="" id="person_01">warrior</button>
+                    <button data-person-btn="" id="person_02">wizard</button>
+                    <button data-person-btn="" id="person_03">thief</button>
+                    <button data-person-btn="" id="person_04">archer</button>
+                    <button data-person-btn="" id="person_05">bard</button>
+                    <button data-person-btn="" id="person_06">mechanic</button>
+                </div>
+            </div>
+    
+    
+    
+            <div class="generator__class-info">
+                <div class="class-info__wrapper">
+                    <div class="class-info__content">
+
+                        <div class="person_01 hidden">
+                            <p class="text">person__text01</p>
+                            <p class="text">person__text01</p>
+                        </div>
+
+                        <div class="person_02 hidden">
+                            <p class="text">person__text02</p>
+                            <p class="text">person__text02</p>
+                        </div>
+
+                        <div class="person_03 hidden">
+                            <p class="text">person__text03</p>
+                            <p class="text">person__text03</p>
+                        </div>
+
+                        <div class="person_04 hidden">
+                            <p class="text">person__text04</p>
+                            <p class="text">person__text04</p>
+                        </div>
+
+                        <div class="person_05 hidden">
+                            <p class="text">person__text05</p>
+                            <p class="text">person__text05</p>
+                        </div>
+
+                        <div class="person_06 hidden">
+                            <p class="text">person__text06</p>
+                            <p class="text">person__text06</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="generator__main">
+
+            <div class="main__stats-block">
+
+
+
+                <div class="">
+
+                    <div class="stats-block__stat flex">
+
+                        <p class="title-stat">heal point: </p><span data-stats="" class="title-stat" id="playerHP"></span>
+    
+                    </div>
+                    
+    
+                    <div class="stats-block__stat flex">
+
+                        <p class="title-stat">DMG: </p><span data-stats="" class="title-stat" id="playerDMG"></span>
+                        
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">speed: </p><span data-stats="" class="title-stat" id="playerSpeed"></span>
+    
+                    </div>
+
+                </div>
+
+                <div class="">
+
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">armor: </p><span data-stats="" class="title-stat" id="playerArm"></span>
+    
+                    </div>
+
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">mana: </p><span data-stats="" class="title-stat" id="playerMana"></span>
+    
+                    </div>
+    
+                    <div class="stats-block__stat flex">
+    
+                        <p class="title-stat">charisma: </p><span data-stats="" class="title-stat" id="playerCharisma"></span>
+    
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="JS/pop-up-info.js"></script>
+    <script src="JS/D12.js"></script>
+
+
+</body>
+</html>
+
