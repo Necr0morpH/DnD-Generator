@@ -65,3 +65,14 @@
     background-color: #967e55;
     border: 4px solid rgb(54, 54, 54);
 }
+
+.fog {
+    background-color: rgb(54, 54, 54);
+    border-color: rgb(54, 54, 54);
+
+}
+
+
+.player-place {
+    background-color: white;
+}

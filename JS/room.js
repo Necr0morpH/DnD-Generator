@@ -38,7 +38,8 @@ roomBtmSmall.addEventListener('click', function(){
     lootRoomGenerator();
     bossRoomGenerator();
     mobGenerator();
-    
+    // fogOfWar();
+
 });
 
 roomBtmStandard.addEventListener('click', function(){
@@ -428,6 +429,7 @@ function removeDangeon() {
         item.classList.remove('room-block--treasure-room');
         item.classList.remove('room-block--shop');
         item.classList.remove('room-block--arena');
+        item.classList.remove('player-place');
     });
 };
 
@@ -435,6 +437,7 @@ function startPosition() {
 
         let newRoom = document.querySelector(`[data-mid="${getRandomIntWithPercent(1, 4, 100)}"]`);
         newRoom.classList.remove('room-block--normal');
+        newRoom.classList.add('player-place');
         newRoom.classList.add('room-block-startPos');
         newRoom.innerHTML = '<img src="IMG/ladder.svg" alt=""></img>';
     
@@ -628,3 +631,83 @@ function mobGenerator() {
     
 };
 
+
+
+// function fogOfWar() {
+//     let i = 1;
+//     document.querySelectorAll('.room-block--notactive').forEach(element => {
+//         console.log(element.children)
+//         if (element.childNodes.length) {
+//             console.log(element.children)
+//             element.firstChild.classList.add('hidden')
+//             element.classList.add('fog');
+//         } else {
+//             element.classList.add('fog');
+//         }
+//         // element.children.classList.add('hidden')
+//     })
+//     // while (i <= 146) {
+//     //     document.querySelectorAll
+//     // }
+// }
+
+
+function playerMove() {
+
+    const startPosition = document.querySelector('.room-block-startPos');
+    console.log(startPosition)
+    
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    
+    let playerPlace = document.querySelector('.player-place');
+
+    let XstartRoom = Number(playerPlace.getAttribute('data-Xpos'));
+    let YstartRoom = Number(playerPlace.getAttribute('data-Ypos'));
+
+
+
+   
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+
+        let YstartRoom = Number(playerPlace.getAttribute('data-Ypos'));
+        let upRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
+
+        console.log(upRoom)
+        if (upRoom.classList.contains('room-block--normal') || upRoom.classList.contains('room-block--start')) {
+            let newRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom + 1}"]`);
+            newRoom.classList.add('player-place');
+        }
+        
+            // newRoom.classList.add('player-place');
+    }
+    else if (e.keyCode == '40') {
+        
+        let YstartRoom = Number(playerPlace.getAttribute('data-Ypos')) + 1;
+        let downRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
+
+        console.log(downRoom)
+        if (downRoom.classList.contains('room-block--normal') || downRoom.classList.contains('room-block--start')) {
+            let newRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom - 1}"]`);
+            
+            newRoom.classList.add('player-place');
+        }
+
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+       console.log('left')
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       console.log('right')
+    };
+
+};
