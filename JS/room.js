@@ -664,7 +664,7 @@ document.onkeydown = checkKey;
 function checkKey(e) {
 
     
-    let playerPlace = document.querySelector('.player-place');
+    let playerPlace = document.querySelector('.room-block-startPos');
 
     let XstartRoom = Number(playerPlace.getAttribute('data-Xpos'));
     let YstartRoom = Number(playerPlace.getAttribute('data-Ypos'));
@@ -677,37 +677,51 @@ function checkKey(e) {
 
     if (e.keyCode == '38') {
 
-        let YstartRoom = Number(playerPlace.getAttribute('data-Ypos'));
         let upRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
 
         console.log(upRoom)
         if (upRoom.classList.contains('room-block--normal') || upRoom.classList.contains('room-block--start')) {
-            let newRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom + 1}"]`);
-            newRoom.classList.add('player-place');
+            let playerPlace = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom + 1}"]`);
+            playerPlace.classList.add('player-place');
         }
         
             // newRoom.classList.add('player-place');
     }
-    else if (e.keyCode == '40') {
+    if (e.keyCode == '40') {
         
-        let YstartRoom = Number(playerPlace.getAttribute('data-Ypos')) + 1;
-        let downRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
+       
+        let downRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom - 1}"]`);
 
         console.log(downRoom)
-        if (downRoom.classList.contains('room-block--normal') || downRoom.classList.contains('room-block--start')) {
+        // if (downRoom.classList.contains('room-block--normal') || downRoom.classList.contains('room-block--start')) {
             let newRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom - 1}"]`);
+            YstartRoom = YstartRoom - 1;
             
             newRoom.classList.add('player-place');
-        }
+        
 
     }
-    else if (e.keyCode == '37') {
-       // left arrow
-       console.log('left')
+    if (e.keyCode == '37') {
+        let leftRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
+
+        console.log(leftRoom)
+        // if (leftRoom.classList.contains('room-block--normal') || leftRoom.classList.contains('room-block--start')) {
+            let newRoom = document.querySelector(`[data-Xpos="${XstartRoom - 1}"][data-Ypos="${YstartRoom }"]`);
+            newRoom.classList.add('player-place');
+        
+        
+            // newRoom.classList.add('player-place');
     }
-    else if (e.keyCode == '39') {
-       // right arrow
-       console.log('right')
+    if (e.keyCode == '39') {
+      
+        let rightRoom = document.querySelector(`[data-Xpos="${XstartRoom}"][data-Ypos="${YstartRoom}"]`);
+
+        console.log(rightRoom)
+        // if (rightRoom.classList.contains('room-block--normal') || rightRoom.classList.contains('room-block--start')) {
+            let newRoom = document.querySelector(`[data-Xpos="${XstartRoom + 1}"][data-Ypos="${YstartRoom }"]`);
+            XstartRoom += 1;
+            newRoom.classList.add('player-place');
+        
     };
 
 };
